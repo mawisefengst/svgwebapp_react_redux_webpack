@@ -6,7 +6,7 @@ class ListItem extends React.Component{
 
 	render(){
 	    const todoLis = this.props.data.map((item,key) => {
-	    	if(key< 20 ) return <ItemObj key={key} data={item} />
+	    	 return <ItemObj key={key} data={item} />
 	    })
 
 		return  <div className="hero-unit row clearfix">{todoLis}</div>
