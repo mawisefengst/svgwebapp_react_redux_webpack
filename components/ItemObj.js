@@ -1,10 +1,16 @@
 import React from 'react'
 
 class ItemObj extends React.Component{
+
+  seeDetail(styleId){
+    //inform store change
+    console.log(styleId);
+  }
+
 	render(){
     const  dataObj = this.props.data;
     const  imageUri  = "http://50.secondthought.com/images/original/" + dataObj.influencer_image;
-		return <div className="col-md-3 influencerImgWrapper">
+		return <div className="col-md-3 influencerImgWrapper" onClick={this.seeDetail.bind(this,dataObj.influencer_id)}>
               <div className="stateWrapper">
                 <span className="state two_letter_state_box">{dataObj.state}</span>
                 <img src={imageUri} />

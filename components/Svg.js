@@ -1,7 +1,23 @@
 import React from 'react'
 
 class App extends React.Component{
+
+
+	constructor(){
+		super();
+		//this.selectFilter = this.selectFilter.bind(this);
+	}
+
+
+	selectFilter(religion){
+		//inform store change
+		console.log(religion);
+	}
+
+
 	render(){
+
+
 		return <svg version="1.1" id="usMap" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
        viewBox="0 0 578.8 347.2">
 
@@ -76,7 +92,7 @@ class App extends React.Component{
         </g>
           
 
-        <g className="region st1 " data-region="southeast">  
+        <g className="region st1 " onClick={this.selectFilter.bind(this,"southeast")}>  
           <path id="SE" d="M521.9,187.6c-0.8-0.6-0.8,0.8-1.6,0.9s-1.2-0.7-2-0.3c-0.8,0.4-0.8,0.7-4.2,1.3
   c-3.5,0.6,0.9-1.7,0.9-1.7s3.9-2,4.1-2.5c0.2-0.6,1.5-0.2,2.2,0.9c0.6,1.1,2.3,1.6,2,1.5c-0.3-0.1,1.2-0.1,1.2-0.1
   c-2.1-1.6-7.3-12.5-7.3-12.5c-2.4,0.9-3.1-0.2-3.1-1s-1.5-1.8-1.5-1.8s-0.6-0.9-0.9-2c-0.2-1.1,1.3,0.5,2-0.1
@@ -123,7 +139,7 @@ class App extends React.Component{
           <text dx="366" dy="236" className="textCaption" fontFamily="Gotham Book" fontSize="13" fill="white">SOUTHEAST</text>
         </g> 
 
-        <g className="st2 region" data-region="southwest"> 
+        <g className="st2 region" data-region="southwest" onClick={this.selectFilter.bind(this,"southwest")}> 
 <path id="SW" d="M331.8,272.4c-0.8-2.2-2.2-4.5-2.7-6.5c-0.5-2.1-2.9-4.8-2.9-4.8l-0.5-20l-0.9-1.2
   c-0.8-1.2-2.7,0.1-4.4-0.2l0.2-24.4c0,0-0.5-5.8-1-11.5h-0.5v-0.2c0-0.2-0.1-3-0.2-7h-0.3c-23.2,1.4-50.7,0.4-78-1.7v0l0,0.2v0.2
   c-64.7-5.1-127.6-16.3-127.3-16.6h-0.1l-1.9,10c0,0-0.4,1.4-1.4,2.4s-2.4-0.4-3.4-1.7c-1-1.2-2.3-0.2-3.2,0.2
@@ -145,7 +161,7 @@ class App extends React.Component{
           <text dx="170" dy="236" className="textCaption" fontFamily="Gotham Book" fontSize="13" fill="white">SOUTHWEST</text>
         </g> 
 
-        <g className="st3 region" data-region="northeast">    
+        <g className="st3 region" data-region="northeast" onClick={this.selectFilter.bind(this,"northeast")}>    
 <path id="NE" d="M576.1,44.8c-0.8-0.8-1.8-0.6-1.8-0.6c-0.7-0.5-0.8,0.6-0.8,0.6c-1.1,0.8-1.3-2.6-1.3-2.6l-1-0.9
   l0.5-0.8l-0.9-1.1c-3.7,1.1-3.9-3.6-3.9-3.6l-4.5-14.4c0,0-4.6-2.7-5.7-2.7c-1.1,0-4.4,4.1-4.4,4.1l-2-0.3c0,0-0.3-1.2-0.6-2.2
   s-1.7,0.2-1.7,0s-4.3,11.9-4.3,11.9s2,2.6,0.6,3.8c-1.4,1.1-0.3,3.7-0.9,4.3c-0.7,0.6,1.2,3.1,0.3,3.6s0,1.7,0,1.7s-1.6,2.6-1.7,4
@@ -178,7 +194,7 @@ class App extends React.Component{
           <text dx="410" dy="175" className="textCaption" fontFamily="Gotham Book" fontSize="13" fill="white" className="northEastTxt" transform="rotate(-45,400,60)" > NORTHEAST </text>
         </g>  
 
-        <g className="st4 region" data-region="west">  
+        <g className="st4 region" data-region="west" onClick={this.selectFilter.bind(this,"west")}>  
   
   <path id="W" d="M243.7,140c-0.8,0-1.7,0-2.7,0c-4.3,0-10.3-0.3-17.1-0.9c0.7-8.6,8.9-107.4,8.9-107.4l0.1-0.5
   c-0.4,0-0.8-0.1-1.2-0.1c-0.2,0-0.3,0-0.5-0.1C147.6,22.5,67.6,0,67.6,0c-0.9,1-0.4,3.7,0,4.3c0.4,0.6,0.1,2.9,0,3.5
@@ -242,7 +258,7 @@ class App extends React.Component{
           <text dx="90" dy="120" className="textCaption" fontFamily="Gotham Book" fontSize="13" fill="white" > WEST </text>
         </g>
 
-        <g className="region st5 state" data-region="midwest">  
+        <g className="region st5 state" data-region="midwest" onClick={this.selectFilter.bind(this,"midwest")}>  
       <path id="MW" d="M460.9,134.4l-2.8-18.7l0-0.2c-0.1,0-0.1,0.1-0.2,0.1c-0.1,0.1-0.2,0.1-0.3,0.2c-0.5,0.3-1,0.6-1.2,0.8
   c-1.5,1.2-10,7.2-10.9,7.6c-0.9,0.4-1.7,0.3-1.7,0.3s-4,2.4-5.1,1.9c-1-0.4-6.7-1.5-8.1-2.7l0.1-0.2c-0.2-0.2-0.2-0.4-0.2-0.6
   c0.5-1.5,0.1-2.7,1.3-4.1c0,0,0.1-0.1,0.3-0.1c0.6-1.4,1.4-3.2,1.9-3.6c0.9-0.7,1.2-4.8,1.9-5c0.7-0.3-0.1,2,0.9,2s0.9-5.3,1.1-6.5

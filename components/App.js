@@ -1,6 +1,7 @@
 import React from 'react'
 import Header  from "./Header"
 import Svg  from "./Svg"
+import Filter from "./Filter"
 import ListItem  from "./ListItem"
 import Footer  from "./Footer"
 import APP_DATA from "./DATA"
@@ -14,10 +15,13 @@ class App extends React.Component{
 	}
 
 	render(){
-		return <div>    
+		return <div>  
 			<Header />
-			<Svg />
-			<ListItem data={this.APP_DATA} />
+			<div className="container">
+				<Svg />
+				<Filter />
+				<ListItem data={this.APP_DATA} />
+			</div>
 			<Footer />
 		</div>
 	}
