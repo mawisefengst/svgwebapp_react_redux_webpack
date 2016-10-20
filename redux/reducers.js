@@ -3,9 +3,25 @@ import APP_DATA from "../components/DATA"
 let reducers = function(state, action){
 	switch(action.type){
 		case "FILTER_RELIGION":
-			return state
+			let region = action.region;
+			let revisedState = Object.assign({},state,{
+				currentPatch : 0,
+				detailViewId :0,
+				showId:0,
+				showLoadMore : "hidden",
+				repeatedItem : APP_DATA.filter(style => {
+					return style.region.toLowerCase() === region.toLowerCase();
+				})
+			});
+			return revisedState
 		case "SHOW_DETAIL":
-			return state
+			let showId = action.id - 1;
+			let detailViewId = (Math.floor(showId /4) + 1) * 4 ;
+			let revisedState_st = Object.assign({},state,{
+				detailViewId : detailViewId,
+				showId: action.id
+			});
+			return revisedState_st
 		case "LOAD_MORE":
 			let currentPatch = state.currentPatch + 1;
 			let showLoadMore = "";

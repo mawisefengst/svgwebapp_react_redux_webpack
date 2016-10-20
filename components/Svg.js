@@ -1,4 +1,5 @@
 import React from 'react'
+import actions from "../redux/actions"
 
 class App extends React.Component{
 
@@ -11,7 +12,8 @@ class App extends React.Component{
 
 	selectFilter(religion){
 		//inform store change
-		console.log(religion);
+		//console.log(religion);
+    this.props.dispatch(actions.filterReligion(religion));
 	}
 
 

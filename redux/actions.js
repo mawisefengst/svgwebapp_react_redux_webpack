@@ -1,8 +1,8 @@
 let actions  = {
-	filterReligion: function(religion){
+	filterReligion: function(region){
 		return {
 			type: "FILTER_RELIGION",
-			religion: religion
+			region: region
 		}
 	},
 	showDetail : function(id){

@@ -9,7 +9,9 @@ let initState = {
 	currentPatch: 0,
 	patchAmount: 20,
 	repeatedItem: APP_DATA.slice(0,20),
-	showLoadMore : ""
+	showLoadMore : "",
+	detailViewId: 0,
+	showId :0 
 };
 
 let store = configureStore(initState);

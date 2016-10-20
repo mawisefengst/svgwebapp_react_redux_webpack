@@ -3,6 +3,7 @@ import Header  from "./Header"
 import Svg  from "./Svg"
 import Filter from "./Filter"
 import ListItem  from "./ListItem"
+import Detail from "./Detail"
 import Footer  from "./Footer"
 import actions from "../redux/actions"
 import { connect } from "react-redux"
@@ -23,11 +24,10 @@ class App extends React.Component{
 	render(){
 		return <div>  
 			<Header />
-			<h1>{this.props.currentPatch}</h1>
 			<div className="container">
-				<Svg />
+				<Svg dispatch={this.props.dispatch} />
 				<Filter />
-				<ListItem data={this.props.repeatedItem} />
+				<ListItem dispatch={this.props.dispatch} data={this.props.repeatedItem} detailViewId={this.props.detailViewId} showId={this.props.showId} />
 				<div className={"btn_load_more_styles " + this.props.showLoadMore} onClick={this.loadmore.bind(this)}>load more styles</div>
 			</div>
 			<Footer />
