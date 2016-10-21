@@ -26,8 +26,8 @@ class App extends React.Component{
 			<Header />
 			<div className="container">
 				<Svg dispatch={this.props.dispatch} />
-				<Filter />
-				<ListItem dispatch={this.props.dispatch} data={this.props.repeatedItem} detailViewId={this.props.detailViewId} showId={this.props.showId} />
+				<Filter dispatch={this.props.dispatch} data={this.props.repeatedItem} />
+				<ListItem dispatch={this.props.dispatch} data={this.props.repeatedItem} detailViewId={this.props.detailViewId} showId={this.props.showId} showIndex={this.props.showIndex} />
 				<div className={"btn_load_more_styles " + this.props.showLoadMore} onClick={this.loadmore.bind(this)}>load more styles</div>
 			</div>
 			<Footer />

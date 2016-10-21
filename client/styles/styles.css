@@ -21,7 +21,7 @@ footer {
   font-size: 0.8em;
 }
 
-/*
+
 @font-face {
     font-family: 'Gotham Book';
     src: url('../fonts/ufonts.com_gotham-book-webfont.woff2') format('woff2'),
@@ -67,7 +67,6 @@ footer {
         url("../fonts/a0a267c6-00d0-4a4d-8f9d-c46790abc94b.svg#a0a267c6-00d0-4a4d-8f9d-c46790abc94b") format("svg");
 }
 
-*/
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -693,19 +692,19 @@ a.footer_logo{
   transition:all .2s ease-out; */ 
 }
 
-.navigationArrow.state1{
+.navigationArrow.state0{
     left: 11%;
 }
 
-.navigationArrow.state2{
+.navigationArrow.state1{
     left: 36%;
 }
 
-.navigationArrow.state3{
+.navigationArrow.state2{
     left: 61%;
 }
 
-.navigationArrow.state0{
+.navigationArrow.state3{
     left: 86%;
 }
 .detailView .col-md-7,.fixedDetailView .col-md-7{

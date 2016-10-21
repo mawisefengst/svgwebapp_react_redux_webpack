@@ -13,7 +13,7 @@ class App extends React.Component{
 	selectFilter(religion){
 		//inform store change
 		//console.log(religion);
-    this.props.dispatch(actions.filterReligion(religion));
+    this.props.dispatch(actions.filter(religion));
 	}
 
 
