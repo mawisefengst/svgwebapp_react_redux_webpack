@@ -13,23 +13,21 @@ class ItemObj extends React.Component{
 	render(){
     const  dataObj = this.props.data;
     const  showDetailData = APP_DATA[this.props.showId - 1];
-    const  imageUri  = "http://50.secondthought.com/images/original/" + dataObj.influencer_image;
     if(dataObj.influencer_id === this.props.detailViewId)  {
-      return <span><div className="col-md-3 influencerImgWrapper" onClick={this.seeDetail.bind(this,dataObj.influencer_id)}>
+      return <div><div className="col-md-3 influencerImgWrapper" onClick={this.seeDetail.bind(this,dataObj.influencer_id)}>
         <div className="stateWrapper">
           <span className="state two_letter_state_box">{dataObj.state}</span>
-          <img src={imageUri} />
+          <img src={ "http://50.secondthought.com/images/original/" + dataObj.influencer_image } />
           <div className="grid_hover_bg">
               <div className="grid_hover_name">{dataObj.influencer_name}</div>
               <div className="grid_hover_state">{dataObj.state_full}</div>
           </div>
         </div>  
-   </div>
-   <Detail data={showDetailData} /></span>
+   </div><Detail data={showDetailData} dispatch={this.props.dispatch} /></div>
     }else  return <div className="col-md-3 influencerImgWrapper" onClick={this.seeDetail.bind(this,dataObj.influencer_id)}>
         <div className="stateWrapper">
           <span className="state two_letter_state_box">{dataObj.state}</span>
-          <img src={imageUri} />
+          <img src={ "http://50.secondthought.com/images/original/" + dataObj.influencer_image }/>
           <div className="grid_hover_bg">
               <div className="grid_hover_name">{dataObj.influencer_name}</div>
               <div className="grid_hover_state">{dataObj.state_full}</div>

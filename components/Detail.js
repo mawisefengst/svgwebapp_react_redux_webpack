@@ -1,12 +1,22 @@
 import React from 'react'
+import actions from "../redux/actions"
 
 class Detail extends React.Component{
 
 
+  seeDetail(direction){
+     // console.log("detail")
+     // this.props.dispatch(actions.showDetail(styleId))
+     if(direction === "prev"){
+       this.props.dispatch(actions.showDetail( this.props.data.influencer_id - 1));
+     }else{
+       this.props.dispatch(actions.showDetail( this.props.data.influencer_id + 1));
+     }
+  }
+
 	render(){
 
     const detailViewObj = this.props.data
-
 		return <div className="col-md-12 detailView expand_background clearfix expand show newExpand detailViewObj_{detailViewObj.showIndex}}"> 
           <div className="col-md-7">
            <div className="expand_name">{detailViewObj.influencer_name}</div>
@@ -63,14 +73,14 @@ class Detail extends React.Component{
         </div> 
 
 
-          <a href="javascript:void(0);" className="prevBtn sprite"></a>
+          <a href="javascript:void(0);" className="prevBtn sprite" onClick={this.seeDetail.bind(this,"prev")}></a>
 
         
 
-          <a href="javascript:void(0);" className="nextBtn sprite"></a>
+          <a href="javascript:void(0);" className="nextBtn sprite" onClick={this.seeDetail.bind(this,"next")}></a>
 
           <a href="javascript:void(0);" className="closeBtn sprite"></a>
-          <div className="sprite navigationArrow state{detailViewObj.arrowIndex}"></div>
+          <div className={"sprite navigationArrow state"+ detailViewObj.influencer_id % 4 }></div>
          </div>
     }     
 }

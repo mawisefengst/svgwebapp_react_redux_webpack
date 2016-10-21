@@ -15,8 +15,8 @@ let reducers = function(state, action){
 			});
 			return revisedState
 		case "SHOW_DETAIL":
-			let showId = action.id - 1;
-			let detailViewId = (Math.floor(showId /4) + 1) * 4 ;
+			let showIndex = action.id - 1;
+			let detailViewId = (Math.floor(showIndex /4) + 1) * 4 ;
 			let revisedState_st = Object.assign({},state,{
 				detailViewId : detailViewId,
 				showId: action.id

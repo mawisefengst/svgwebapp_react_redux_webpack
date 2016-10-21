@@ -16,6 +16,7 @@ let actions  = {
 			type: "LOAD_MORE"
 		}
 	}
+	//filter by state
 }
 
 export default actions
