@@ -52,6 +52,5 @@
     "webpack": "^1.13.2",
     "nodemon": "^1.11.0",
     "webpack-dev-server": "^1.16.2"
-  },
-  "homepage": "https://github.com/mawisefengst/svgwebapp_react_redux_webpack#readme",
+  }
 }
