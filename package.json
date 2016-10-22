@@ -23,6 +23,11 @@
     "url": "https://github.com/mawisefengst/svgwebapp_react_redux_webpack/issues"
   },
   "dependencies": {
+    "express": "^4.13.4",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8"
+  },
+  "dependencies": {
     "axios": "^0.14.0",
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.2",
