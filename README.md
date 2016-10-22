@@ -1,7 +1,8 @@
  "#svgwebapp_react_reduct_webpack" 
 
-
 # react-redux-webpack
+
+Please check live demo: https://svgreact.herokuapp.com/
 
 >Warning: Make sure you're using the latest version of Node.js and NPM
 

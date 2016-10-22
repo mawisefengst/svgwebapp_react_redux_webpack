@@ -7,7 +7,7 @@ import Detail from "./Detail"
 import Footer  from "./Footer"
 import actions from "../redux/actions"
 import { connect } from "react-redux"
-require("../client/styles/styles.css")
+import "../client/styles/styles.css"
 
 class App extends React.Component{
 
