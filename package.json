@@ -46,7 +46,9 @@
     "redux-logger": "^2.7.0",
     "redux-thunk": "^2.1.0",
     "url-loader": "^0.5.7",
-    "webpack": "^1.12.13"
+    "webpack": "^1.12.13",
+    "style-loader": "^0.13.1",
+    "css-loader": "^0.23.1"
   },
   "homepage": "https://github.com/mawisefengst/svgwebapp_react_redux_webpack#readme"
 }
