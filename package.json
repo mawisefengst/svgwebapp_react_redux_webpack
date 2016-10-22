@@ -6,7 +6,7 @@
   "scripts": {
     "test": "test",
      "postinstall": "webpack --config ./webpack-prod.config.js --progress --colors",
-     "start": "node server.js"
+     "start": "node ./server.js"
   },
   "repository": {
     "type": "git",
