@@ -40,7 +40,7 @@ go to [http://localhost:8080](http://localhost:8080) in your browser.
 
 ## Dependencies
 
-What you need to run this app:
+What you need to run this app: 
 * `node` and `npm` (Use [NVM](https://github.com/creationix/nvm))
 * Ensure you're running Node (`v4.1.x`+) and NPM (`2.14.x`+)
 
