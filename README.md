@@ -1,6 +1,6 @@
  "#svgwebapp_react_reduct_webpack" 
  
- +Please check live demo:  <a href="https://svgreact.herokuapp.com/" target="_blank">https://svgreact.herokuapp.com/</a>
+ + Depolyed to Heroku https://svgreact.herokuapp.com/ </a>
 
 # react-redux-webpack
 
